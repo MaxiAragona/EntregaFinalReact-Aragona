@@ -1,0 +1,17 @@
+:root {
+
+    background-color: gray;
+
+
+}
+.bienvenida {
+    background-color: gray;
+    color: white;
+    text-align: center;
+    padding-top: 100px;
+    font-size: 40px;
+}
+.navBar {
+    background-color: aqua;
+    font-size: 40px;
+}

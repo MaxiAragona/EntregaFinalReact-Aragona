@@ -4,7 +4,7 @@ import { Flex, Spacer , Box , Menu , MenuButton , MenuList , MenuItem } from '@c
 
 const NavBar = () => {
   return (
-    <div>
+    <div className='navBar'>
       <Flex>
   <Box p='4' >
       PowerEcommerce
@@ -15,8 +15,8 @@ const NavBar = () => {
   <MenuButton >
     Categorías
   </MenuButton>
-  <MenuList>
-    <MenuItem>Proteínas</MenuItem>
+  <MenuList bg='white'>
+    <MenuItem color={'red'}>Proteínas</MenuItem>
     <MenuItem>Creatinas</MenuItem>
     
  
