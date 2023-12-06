@@ -6,7 +6,7 @@ const NavBar = () => {
   return (
     <div className='navBar'>
       <Flex>
-  <Box p='4' >
+  <Box className='titulo' >
       PowerEcommerce
   </Box>
   <Spacer />
@@ -15,8 +15,8 @@ const NavBar = () => {
   <MenuButton >
     Categorías
   </MenuButton>
-  <MenuList bg='white'>
-    <MenuItem color={'red'}>Proteínas</MenuItem>
+  <MenuList color={'white'}>
+    <MenuItem >Proteínas</MenuItem>
     <MenuItem>Creatinas</MenuItem>
     
  
