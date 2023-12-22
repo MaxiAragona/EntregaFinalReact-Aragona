@@ -1,23 +1,25 @@
 :root {
 
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(99, 99, 99);
 }
 .bienvenida {
-    background-color: black;
-    color: orange;
+    background-color: rgb(99, 99, 99);
+    color: rgb(255, 255, 255);
     text-align: center;
     padding-top: 150px;
-    font-size: 40px;
+    font-size: 30px;
 }
 .navBar {
-    background-color: gray;
-    font-size: 40px;
+    background-color: rgb(42, 167, 42);
+    font-size: 30px;
 }
 .carrito {
-    margin: 10px;
-    padding: 10px;
+    display: flex;
+    margin-top: 10px;
+    padding: 15px;
 }
 .titulo {
+    display: flex;
     margin: 10px;
     padding: 10px;
 }
