@@ -1,13 +1,21 @@
 import React from 'react'
-import NavBar from './components/NavBar'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import ItemDetailContainer from './components/ItemDetailContainer'
 import ItemListContainer from './components/ItemListContainer'
+import Cart from './components/Cart'
+import NavBar from './components/NavBar'
 
 const App = () => {
   return (
-    <div>
+    <BrowserRouter>
       <NavBar />
-      <ItemListContainer greeting={"Bienvenidos a PowerEcommerce"} />
-    </div>
+      <Routes>
+        <Route exact path="/" element={<ItemListContainer />} />
+        <Route path="/item/:id" element={<ItemDetailContainer />} />
+        <Route path="/category/:categoria" element={<ItemListContainer />} />
+        <Route exact path="/Cart" element={<Cart />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 

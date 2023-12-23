@@ -2,24 +2,9 @@
 
     background-color: rgb(99, 99, 99);
 }
-.bienvenida {
-    background-color: rgb(99, 99, 99);
-    color: rgb(255, 255, 255);
-    text-align: center;
-    padding-top: 150px;
-    font-size: 30px;
-}
+
 .navBar {
     background-color: rgb(42, 167, 42);
     font-size: 30px;
 }
-.carrito {
-    display: flex;
-    margin-top: 10px;
-    padding: 15px;
-}
-.titulo {
-    display: flex;
-    margin: 10px;
-    padding: 10px;
-}
+
