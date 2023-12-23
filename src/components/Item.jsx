@@ -8,16 +8,16 @@ const Item = ({ producto }) => {
       <Card maxW='sm'>
         <CardBody>
           <Stack mt='6' spacing='3'>
-            <Heading size='md' color='green'>
+            <Heading size='md' color='#99DE13'>
               <img src={producto.imagen} alt={producto.nombre} />
               <p>Producto: {producto.nombre}</p>
             </Heading>
-            <Text color='blue'>Categoría: {producto.tipo}</Text>
+            <Text color='black'>Categoría: {producto.tipo}</Text>
           </Stack>
         </CardBody>
-        <CardFooter>
+        <CardFooter justify='center'>
           <Link to={`/item/${producto.id}`} >
-            <Button>más detalles</Button>
+            <Button >Ver más</Button>
           </Link>
         </CardFooter>
         <Divider />

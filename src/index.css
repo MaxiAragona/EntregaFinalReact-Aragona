@@ -1,10 +1,10 @@
-:root {
-
-    background-color: rgb(99, 99, 99);
-}
 
 .navBar {
-    background-color: rgb(42, 167, 42);
+    background-color: #99DE13;
     font-size: 30px;
+}
+
+.carrito {
+    position: relative;
 }
 

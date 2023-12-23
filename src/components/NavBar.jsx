@@ -1,6 +1,6 @@
 import React from 'react'
 import CartWidget from './CartWidget'
-import { Flex, Spacer, Box, Menu, MenuButton, MenuList, MenuItem, Container } from '@chakra-ui/react'
+import { Flex, Spacer, Box, Menu, MenuButton, MenuList, MenuItem, Container, Text } from '@chakra-ui/react'
 import { Link } from 'react-router-dom';
 
 const NavBar = () => {
@@ -14,8 +14,8 @@ const NavBar = () => {
           <Link to='/'>
             <Flex alignItems='center'>
               PowerEcommerce
-              <Spacer />
-              <svg xmlns="http://www.w3.org/2000/svg" fill="#000000" version="1.1" width="32px" height="32px" viewBox="0 0 538.842 538.842">
+              <Spacer mx="5px" />
+              <svg xmlns="http://www.w3.org/2000/svg" fill="#000000" version="1.1" width="40px" height="40px" viewBox="0 0 538.842 538.842">
                 <g>
                   <g>
                     <polygon points="392.326,200.43 325.083,200.43 423.691,0 280.813,0 133.933,298.54 210.513,298.54 115.151,538.842   " />
@@ -31,22 +31,22 @@ const NavBar = () => {
 
           <Menu>
             <MenuButton >
-              Categorías
+              <Text fontSize='xl'>Categorias</Text>
             </MenuButton>
             <MenuList color={'black'}>
               <MenuItem>
                 <Link to='/category/Proteína'>
-                  Proteínas
+                  <Text fontSize='md'>Proteínas</Text>
                 </Link>
               </MenuItem>
               <MenuItem>
                 <Link to='/category/Aminoácidos'>
-                  Aminoacidos
+                  <Text fontSize='md'>Aminoácidos</Text>
                 </Link>
               </MenuItem>
               <MenuItem>
                 <Link to='/category/Creatina'>
-                  Creatina
+                  <Text fontSize='md'>Creatina</Text>
                 </Link>
               </MenuItem>
             </MenuList>
