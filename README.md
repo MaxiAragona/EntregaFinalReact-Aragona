@@ -1,3 +1,3 @@
-# React PreEntrega 2 Aragona
+# React Entrega Final Aragona
 
 ![](public/assets/preEntrega2.gif)
