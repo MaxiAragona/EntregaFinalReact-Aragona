@@ -1,27 +1,46 @@
 import { React, useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import productos from "../data/productos";
 import ItemList from "./ItemList";
 import { Container } from '@chakra-ui/react';
+import { collection, getDocs, getFirestore } from "firebase/firestore"
+import Loader from './Loader';
 
 const ItemListContainer = () => {
-  const [productosFiltrados, setProductosFiltrados] = useState(productos)
   const { categoria } = useParams()
+  const [loading, setLoading] = useState(true)
+  const [productosFiltrados, setProductosFiltrados] = useState([])
 
   useEffect(() => {
-    if (categoria) {
-      const productosFiltrados = productos.filter(producto => producto.tipo == categoria)
-      setProductosFiltrados(productosFiltrados)
-    } else { 
-      setProductosFiltrados(productos) 
-    }
+
+    setLoading(true)
+
+    const db = getFirestore()
+      
+  
+    const itemsCollection = collection(db, "productos")
+  
+    getDocs(itemsCollection).then((snapshot) => {
+      const productos = snapshot.docs.map((doc) => doc.data())
+      if (categoria) {
+        const productosFiltrados = productos.filter(producto => producto.tipo == categoria)
+        setProductosFiltrados(productosFiltrados)
+      } else { 
+        setProductosFiltrados(productos) 
+      }
+      setLoading(false)
+    })
+  
   }, [categoria])
+
+
+  
 
   return (
     <Container maxW='80%'>
-      <ItemList productos={productosFiltrados} />
+      {loading && <Loader/>}
+      {!loading && <ItemList productos={productosFiltrados} />}
     </Container>
   )
-}
+  }
 
 export default ItemListContainer

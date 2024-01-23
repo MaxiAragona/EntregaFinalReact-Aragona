@@ -40,7 +40,7 @@ const NavBar = () => {
                 </Link>
               </MenuItem>
               <MenuItem>
-                <Link to='/category/Aminoácidos'>
+                <Link to='/category/Aminoácido'>
                   <Text fontSize='md'>Aminoácidos</Text>
                 </Link>
               </MenuItem>
