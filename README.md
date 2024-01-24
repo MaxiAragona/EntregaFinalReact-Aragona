@@ -7,11 +7,11 @@ Luego, tenemos un menú desplegable por categorias donde ahí eligiendo una de e
 Ya dentro del carrito observamos los productos seleccionados con la suma de sus precios y botones de vaciar carrito, eliminar por producto y un botón de ordenar pedido donde implementamos un formulario básico con los datos del usuario donde le generará un número de ID que se agrega en la base de datos con sus datos ingresados.
 
 
-------------------------------------------------------------------gif del E-COMMERCE-----------------------------------------------------------------------------------
+-------------------------------------------gif del E-COMMERCE---------------------------------------
 ![](public/assets/video-para-gif.gif)
 
 
--------------------------------------------------------------------gif del firebase-------------------------------------------------------------------------------------
+-------------------------------------------gif del firebase------------------------------------------
 ![](public/assets/db.gif)
 
 
