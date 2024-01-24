@@ -15,32 +15,32 @@ const ItemListContainer = () => {
     setLoading(true)
 
     const db = getFirestore()
-      
-  
+
+
     const itemsCollection = collection(db, "productos")
-  
+
     getDocs(itemsCollection).then((snapshot) => {
       const productos = snapshot.docs.map((doc) => doc.data())
       if (categoria) {
         const productosFiltrados = productos.filter(producto => producto.tipo == categoria)
         setProductosFiltrados(productosFiltrados)
-      } else { 
-        setProductosFiltrados(productos) 
+      } else {
+        setProductosFiltrados(productos)
       }
       setLoading(false)
     })
-  
+
   }, [categoria])
 
 
-  
+
 
   return (
     <Container maxW='80%'>
-      {loading && <Loader/>}
+      {loading && <Loader />}
       {!loading && <ItemList productos={productosFiltrados} />}
     </Container>
   )
-  }
+}
 
 export default ItemListContainer

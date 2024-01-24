@@ -18,52 +18,52 @@ const Form = () => {
     const db = getFirestore()
 
     const handleSubmit = (e) => {
-        
+
         e.preventDefault();
 
-        addDoc(ordersCollection, order).then(({id}) =>
+        addDoc(ordersCollection, order).then(({ id }) =>
             setOrderId(id))
-        
+
     }
-     
+
     const order = {
-       cliente: { nombre, email},
-       items: cart,
+        cliente: { nombre, email },
+        items: cart,
     }
 
     const ordersCollection = collection(db, "ordenes")
-        
-        
 
-        
-    
 
-  return (
 
-    <div>
 
-        <Heading noOfLines={1}>
-        Complete el siguiente formulario para tener el registro de su compra, gracias !
-        </Heading>
 
-        <FormControl isRequired>
-            <form action="" onSubmit={handleSubmit}>
-                <FormLabel>Nombre</FormLabel>
-                <Input type="text" placeholder='Nombre' onChange={(e) => setNombre(e.target.value)} value={nombre} />
-                <FormLabel>Email</FormLabel>
-                <Input type="email" placeholder='Email' onChange={(e) => setEmail(e.target.value)} value={email} />
-                <FormHelperText>Nosotros compartiremos sus datos.</FormHelperText>
 
-                <Button type='submit' colorScheme='teal' size='md'>
-                    Enviar 
-                </Button>
-            </form>
-        </FormControl>
+    return (
 
-        <Text>Tu Orden Id es: {orderId}</Text>
-    </div>
+        <div>
 
-  )
+            <Heading noOfLines={1}>
+                Complete el siguiente formulario para tener el registro de su compra, gracias !
+            </Heading>
+
+            <FormControl isRequired>
+                <form action="" onSubmit={handleSubmit}>
+                    <FormLabel>Nombre</FormLabel>
+                    <Input type="text" placeholder='Nombre' onChange={(e) => setNombre(e.target.value)} value={nombre} />
+                    <FormLabel>Email</FormLabel>
+                    <Input type="email" placeholder='Email' onChange={(e) => setEmail(e.target.value)} value={email} />
+                    <FormHelperText>Nosotros compartiremos sus datos.</FormHelperText>
+
+                    <Button type='submit' colorScheme='teal' size='md'>
+                        Enviar
+                    </Button>
+                </form>
+            </FormControl>
+
+            <Text>Tu Orden Id es: {orderId}</Text>
+        </div>
+
+    )
 }
 
 export default Form

@@ -9,9 +9,9 @@ const ItemDetail = ({ producto }) => {
       <Stack mt='6' spacing='3'>
         <Heading size='md' color='#99DE13'>
           <Center mb="15px">
-          <img width="30%" src={producto.imagen} alt={producto.nombre} />
+            <img width="30%" src={producto.imagen} alt={producto.nombre} />
           </Center>
-         
+
           <p>Producto: {producto.nombre}</p>
         </Heading>
         <Text color='black'>Categoría: {producto.tipo}</Text>
@@ -19,7 +19,7 @@ const ItemDetail = ({ producto }) => {
         <Text color='black'>Precio: ${producto.precio}</Text>
       </Stack>
       <Center mt="15px">
-      <ItemCount producto={producto} />
+        <ItemCount producto={producto} />
       </Center>
     </Container>
   )
