@@ -46,7 +46,7 @@ const NavBar = () => {
               </MenuItem>
               <MenuItem>
                 <Link to='/category/Creatina'>
-                  <Text fontSize='md'>Creatina</Text>
+                  <Text fontSize='md'>Creatinas</Text>
                 </Link>
               </MenuItem>
             </MenuList>
